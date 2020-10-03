@@ -1,3 +1,4 @@
+import os
 import sympy
 
 def solve_1_unray(equation,one_unray):
@@ -55,3 +56,4 @@ if r',' in equation:
     solve_n_unray(equation)
 else:
     solve_1_unray(equation,True)
+os.system('pause')
