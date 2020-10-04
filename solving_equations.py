@@ -3,14 +3,8 @@ import sympy
 def solve_1_unray(equation,one_unray):
     eq=equation.split(r'=')
     if eq[1]!=r'0':
-        if eq[1][0]==r'-':
-            eq[0]+=r'+'+eq[1][1:]
-            eq[1]='0'
-        elif eq[1][0] in ['0','1','2','3','4','5','6','7','8','9','x','y','z']:
-            eq[0]+=r'-'+eq[1]
-            eq[1]='0'
-        else:
-            pass
+        eq[0]+=r'-('+eq[1]+')'
+        eq[1]='0'
     else:
         pass
     if r'^' in eq[0]:
@@ -52,7 +46,7 @@ def solve_n_unray(equation):
     print('方程的解为：',solution)
 
 while True:
-    equation=input('输入要计算的方程（如有多个方程请用逗号隔开，未知数只支持小写的xyz，等号右边只能有一项，未知数前的系数与未知数之间需加乘号“*”,输入为空即退出程序）：')
+    equation=input('输入要计算的方程（如有多个方程请用逗号隔开，未知数只支持小写的xyz，未知数前的系数与未知数之间需加乘号“*”,输入为空即退出程序）：')
     if equation=='':
         break
     else:
