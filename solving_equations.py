@@ -4,10 +4,10 @@ def solve_1_unray(equation,one_unray):
     eq=equation.split(r'=')
     if eq[1]!=r'0':
         if eq[1][0]==r'-':
-            eq[0]+=r''+eq[1][1:]
+            eq[0]+=r'+'+eq[1][1:]
             eq[1]='0'
         elif eq[1][0] in ['0','1','2','3','4','5','6','7','8','9','x','y','z']:
-            eq[0]+=r''+eq[1]
+            eq[0]+=r'-'+eq[1]
             eq[1]='0'
         else:
             pass
